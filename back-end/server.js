@@ -2,8 +2,10 @@ var express= require("express");
 var app = express();
 var restRouter = require("./routes/rest.js");
 var mongoose = require("mongoose");
+var config= require("./config");
 
-mongoose.connect("mongodb://root:admin@ds163796.mlab.com:63796/eat");
+
+mongoose.connect(config.mongodbpath);
 
 
 app.use(function(req, res, next) {
