@@ -1,10 +1,10 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
-/dist-server
-/tmp
-/out-tsc
+/front-end/dist
+/front-end/dist-server
+/front-end/tmp
+/front-end/out-tsc
 
 # dependencies
 front-end/node_modules
@@ -35,8 +35,8 @@ testem.log
 /typings
 
 # e2e
-front-end/e2e/*.js
-front-end/e2e/*.map
+/front-end/e2e/*.js
+/front-end/e2e/*.map
 
 # System Files
 .DS_Store
