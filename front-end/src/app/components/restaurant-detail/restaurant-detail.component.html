@@ -1,8 +1,11 @@
 <div class="container" *ngIf="restaurant">
   <div class="col-xs-12 col-md-4">
     <div>
-      <h2>{{restaurant._id}}</h2>
       <h2>{{restaurant.name}}</h2>
+      <h2>recipe list</h2>
+      <div *ngFor="let recipe of restaurant.recipes">
+        {{recipe.name}}  price:{{recipe.price}}
+      </div>
     </div>
   </div>
 </div>
