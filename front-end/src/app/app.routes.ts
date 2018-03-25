@@ -5,16 +5,26 @@ import { ProblemDetailComponent } from './components/problem-detail/problem-deta
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "problems",
+    redirectTo: "restaurants",
     pathMatch: "full"
   },
   {
-    path: "problems",
+    path: "restaurants",
     component: ProblemListComponent,
     pathMatch: "full"
   },
   {
-    path: "problems/:id",
+    path: "login",
+    component: ProblemListComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "register",
+    component: ProblemListComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "restaurants/:_id",
     component: ProblemDetailComponent,
   },
   {

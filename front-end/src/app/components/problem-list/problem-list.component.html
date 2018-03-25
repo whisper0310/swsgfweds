@@ -1,9 +1,8 @@
 <app-add-problem></app-add-problem>
 <div class="container">
   <div class="list-group">
-    <div class="list-group-item" *ngFor="let problem of problems" [routerLink]="['/problems/',problem.id]">
-      <!--<span>{{problem.id}}</span>-->
-      <strong>{{problem.name}}</strong>
+    <div class="list-group-item" *ngFor="let restaurant of restaurants" [routerLink]="['/restaurants/',restaurant._id]">
+      <strong>id:{{restaurant._id}}, name:{{restaurant.name}}</strong>
     </div>
   </div>
 </div>

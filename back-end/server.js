@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
 app.use("/api/v1", restRouter);
 
 var UserController = require('./user/UserController');
-app.use('/users', UserController);
+app.use('/api/v1/auth', UserController);
 
 app.listen(3000, function(){
   console.log("App started listening on port 3000");

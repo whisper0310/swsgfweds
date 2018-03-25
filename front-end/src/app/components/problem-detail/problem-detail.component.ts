@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {ActivatedRoute, Params} from "@angular/router";
-import { Problem} from '../../models/problem.model';
+import { Restaurant } from '../../models/restaurant.model';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Problem} from '../../models/problem.model';
   styleUrls: ['./problem-detail.component.css']
 })
 export class ProblemDetailComponent implements OnInit {
-  problem: Problem;
+  restaurant: Restaurant;
   constructor(
     private route: ActivatedRoute,
     @Inject("data") private data
@@ -19,9 +19,12 @@ export class ProblemDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.problem = this.data.getProblem(+params['id'])
-
+      this.data.getRestaurant(params['_id']).subscribe(
+        data => this.restaurant=data
+      )
     })
+    // this.route.params.subscribe(params => {
+    //   this.restaurant = this.data.getRestaurant(params['id'])
   }
 
 }

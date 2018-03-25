@@ -1,17 +1,19 @@
 var express = require("express");
 var router = express.Router();
 
-var problemService = require("../services/problemService");
+var restaurantService = require("../services/restaurantService");
 
-router.get("/problems", function(req, res){
-  problemService.getProblems()
-      .then(problems => res.json(problems));
+router.get("/restaurants", function(req, res){
+  console.log(12)
+  restaurantService.getRestaurants()
+      .then(restaurants => res.json(restaurants));
 });
 
-router.get("/problems/:id", function(req, res){
+router.get("/restaurants/:id", function(req, res){
   var id = req.params.id;
-  problemService.getProblem(+id)
-      .then(problem => res.json(problem));
+  restaurantService.getRestaurant(id)
+      .then(restaurant => res.json(restaurant));
 });
-router.post("/problems");
+
+
 module.exports = router;
