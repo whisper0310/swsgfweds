@@ -2,7 +2,7 @@ var express= require("express");
 var app = express();
 var restRouter = require("./routes/rest.js");
 var mongoose = require("mongoose");
-var config = require("./config");
+var config = require("./config.js");
 mongoose.connect(config.path);
 
 
