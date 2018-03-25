@@ -3,21 +3,25 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule} from "@angular/common/http";
 import { routing} from './app.routes';
 import { AppComponent } from './app.component';
-import { ProblemListComponent } from './components/problem-list/problem-list.component';
+import { RestaurantListComponent } from './components/restaurant-list/restaurant-list.component';
 
 import { DataService } from './services/data.service';
-import { ProblemDetailComponent } from './components/problem-detail/problem-detail.component';
+import { RestaurantDetailComponent } from './components/restaurant-detail/restaurant-detail.component';
 import { AddProblemComponent } from './components/add-problem/add-problem.component';
 import {FormsModule} from "@angular/forms";
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProblemListComponent,
-    ProblemDetailComponent,
+    RestaurantListComponent,
+    RestaurantDetailComponent,
     AddProblemComponent,
-    NavBarComponent
+    NavBarComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     FormsModule,

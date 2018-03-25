@@ -1,6 +1,8 @@
 import {Routes, RouterModule} from "@angular/router";
-import { ProblemListComponent } from './components/problem-list/problem-list.component';
-import { ProblemDetailComponent } from './components/problem-detail/problem-detail.component';
+import { RestaurantListComponent } from './components/restaurant-list/restaurant-list.component';
+import { RestaurantDetailComponent } from './components/restaurant-detail/restaurant-detail.component';
+import { LoginComponent} from './components/login/login.component';
+import { RegisterComponent} from './components/register/register.component';
 
 const routes: Routes = [
   {
@@ -10,26 +12,26 @@ const routes: Routes = [
   },
   {
     path: "restaurants",
-    component: ProblemListComponent,
+    component: RestaurantListComponent,
     pathMatch: "full"
   },
   {
     path: "login",
-    component: ProblemListComponent,
+    component: LoginComponent,
     pathMatch: "full"
   },
   {
     path: "register",
-    component: ProblemListComponent,
+    component: RegisterComponent,
     pathMatch: "full"
   },
   {
     path: "restaurants/:_id",
-    component: ProblemDetailComponent,
+    component: RestaurantDetailComponent,
   },
   {
     path: "**",
-    component: ProblemListComponent,
+    component: RestaurantListComponent,
   },
 ];
 

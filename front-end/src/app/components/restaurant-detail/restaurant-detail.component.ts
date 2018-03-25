@@ -4,11 +4,11 @@ import { Restaurant } from '../../models/restaurant.model';
 
 
 @Component({
-  selector: 'app-problem-detail',
-  templateUrl: './problem-detail.component.html',
-  styleUrls: ['./problem-detail.component.css']
+  selector: 'app-restaurant-detail',
+  templateUrl: './restaurant-detail.component.html',
+  styleUrls: ['./restaurant-detail.component.css']
 })
-export class ProblemDetailComponent implements OnInit {
+export class RestaurantDetailComponent implements OnInit {
   restaurant: Restaurant;
   constructor(
     private route: ActivatedRoute,

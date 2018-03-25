@@ -5,11 +5,11 @@ import {Subscription} from "rxjs/Subscription";
 
 
 @Component({
-  selector: 'app-problem-list',
-  templateUrl: './problem-list.component.html',
-  styleUrls: ['./problem-list.component.css']
+  selector: 'app-restaurant-list',
+  templateUrl: './restaurant-list.component.html',
+  styleUrls: ['./restaurant-list.component.css']
 })
-export class ProblemListComponent implements OnInit {
+export class RestaurantListComponent implements OnInit {
   restaurants: Restaurant[] = [];
   constructor(@Inject("data") private data) { }
 
