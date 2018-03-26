@@ -1,8 +1,13 @@
 var mongoose = require("mongoose");
+
 var RestaurantSchema = new mongoose.Schema(
     {
       name:String,
-      address:String
+      address:String,
+        recipes:[{
+          type:mongoose.Schema.ObjectId,
+          ref:'Recipe'
+        }]
     }
 );
 

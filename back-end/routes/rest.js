@@ -4,9 +4,8 @@ var router = express.Router();
 var restaurantService = require("../services/restaurantService");
 
 router.get("/restaurants", function(req, res){
-  console.log(12)
   restaurantService.getRestaurants()
-      .then(restaurants => res.json(restaurants));
+    .then(restaurants => res.json(restaurants));
 });
 
 router.get("/restaurants/:id", function(req, res){

@@ -1,7 +1,9 @@
 var mongoose = require('mongoose');
 RestaurantSchema = require("../models/restaurantModel");
+RecipeSchema = require("../models/recipeModel");
 
 Restaurant = mongoose.model("Restaurant",RestaurantSchema);
+Recipe = mongoose.model("Recipe",RecipeSchema);
 
 var getRestaurants = function(){
   return new Promise((resolve, reject) => {
@@ -9,25 +11,27 @@ var getRestaurants = function(){
       if (err){
         reject(err);
       }
-      console.log(restaurants);
       resolve(restaurants);
     })
   });
 };
 
 var getRestaurant = function(id){
-  console.log(id)
   return new Promise((resolve, reject) => {
-    Restaurant.findOne({_id:id}, function (err, restaurant){
-    if (err){
-      reject(err);
-    }
-    resolve(restaurant);
-  })
-});
+
+    Restaurant.findOne({_id:id}).populate('recipes').exec(function (err, restaurant){
+      console.log(restaurant.recipes);
+      if (err){
+          console.log(err);
+          reject(err);
+      }
+      resolve(restaurant);
+    })
+  });
 };
+
 module.exports = {
   getRestaurants: getRestaurants,
-  getRestaurant: getRestaurant
+  getRestaurant: getRestaurant,
 };
 

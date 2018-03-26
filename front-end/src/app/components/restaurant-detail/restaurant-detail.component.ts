@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {ActivatedRoute, Params} from "@angular/router";
 import { Restaurant } from '../../models/restaurant.model';
-
+import { Recipe } from '../../models/recipe.model';
 
 @Component({
   selector: 'app-restaurant-detail',
@@ -10,6 +10,7 @@ import { Restaurant } from '../../models/restaurant.model';
 })
 export class RestaurantDetailComponent implements OnInit {
   restaurant: Restaurant;
+  recipes: Recipe[];
   constructor(
     private route: ActivatedRoute,
     @Inject("data") private data
@@ -22,9 +23,8 @@ export class RestaurantDetailComponent implements OnInit {
       this.data.getRestaurant(params['_id']).subscribe(
         data => {
           this.restaurant=data;
-          console.log(this.restaurant);
         }
-      )
+      );
     });
 
     // this.route.params.subscribe(params => {

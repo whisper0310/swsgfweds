@@ -4,6 +4,7 @@ import { HttpClient} from "@angular/common/http";
 import { BehaviorSubject} from "rxjs/BehaviorSubject";
 import { Observable} from "rxjs/Observable";
 import 'rxjs/add/operator/toPromise';
+import {Recipe} from '../models/recipe.model';
 
 @Injectable()
 export class DataService {
@@ -16,6 +17,9 @@ export class DataService {
     return this.http.get<Restaurant>(`http://localhost:3000/api/v1/restaurants/${id}`);
   }
 
+  // getRecipes(id:String):Observable<Recipe[]>{
+  //   return this.http.get<Recipe[]>(`http://localhost:3000/api/v1/recipes/${id}`);
+  // }
 
   private handleError(error:any): Promise<any> {
     console.log('An error occured', error);
