@@ -3,7 +3,7 @@
     <div>
       <h2>{{restaurant.name}}</h2>
       <h2>recipe list</h2>
-      <div *ngFor="let recipe of restaurant.recipes" (click)="this.onclick(recipe._id)">
+      <div *ngFor="let recipe of restaurant.recipes" (click)="this.add_to_cart(recipe)">
           {{recipe.name}}  price:{{recipe.price}}
       </div>
     </div>

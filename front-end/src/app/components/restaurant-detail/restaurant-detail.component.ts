@@ -19,12 +19,16 @@ export class RestaurantDetailComponent implements OnInit {
 
   }
 
-  onclick(id){
+  add_to_cart(recipe){
     var socket = io('http://localhost');
-    socket.on('news', function (data) {
+    socket.emit('add', { recipe: recipe });
+    socket.on('cart', function(data){
       console.log(data);
-      socket.emit('my other event', { my: 'data' });
-    });
+    })
+    // socket.on('news', function (data) {
+    //   console.log(data);
+    //
+    // });
   }
   ngOnInit() {
     this.route.params.subscribe(params => {

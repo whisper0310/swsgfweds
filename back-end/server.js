@@ -25,12 +25,17 @@ app.use('/api/v1/auth', UserController);
 //         console.log(data);
 //     });
 // });
-
+var cart={ recipes:[] };
 io.on('connection', function (socket) {
-    socket.emit('news', { hello: 'world' });
-    socket.on('my other event', function (data) {
+
+    // socket.emit('news', { hello: 'world' });
+    socket.on('add', function (data) {
         console.log(data);
+        cart.recipes.push(data);
+        cart.recipes.push(data);
     });
+    socket.emit('cart', cart);
+
 });
 
 app.listen(3000, function(){
