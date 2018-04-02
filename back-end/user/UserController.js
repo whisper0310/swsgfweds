@@ -45,6 +45,7 @@ router.get('/me', function(req, res) {
 
 
 router.post('/login', function(req, res) {
+    console.log(req.body);
     User.findOne({ email: req.body.email }, function (err, user) {
         if (err) return res.status(500).send('Error on the server.');
         if (!user) return res.status(404).send('No user found.');

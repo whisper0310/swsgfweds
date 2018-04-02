@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule} from "@angular/common/http";
+import { CookieService} from 'ngx-cookie-service';
 import { routing} from './app.routes';
 import { AppComponent } from './app.component';
 import { RestaurantListComponent } from './components/restaurant-list/restaurant-list.component';
@@ -33,7 +34,8 @@ import { RegisterComponent } from './components/register/register.component';
     {
       provide:"data",
       useClass: DataService
-    }],
+    },
+    CookieService],
   // put something in providers, it can be used every where
   bootstrap: [AppComponent]
 })

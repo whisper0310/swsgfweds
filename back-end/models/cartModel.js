@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var RecipeSchema = new mongoose.Schema(
+var CartSchema = new mongoose.Schema(
     {
       user:{
           type:mongoose.Schema.ObjectId,
@@ -13,4 +13,4 @@ var RecipeSchema = new mongoose.Schema(
     }
 );
 
-module.exports = RecipeSchema;
+module.exports = CartSchema;

@@ -17,6 +17,10 @@ export class DataService {
     return this.http.get<Restaurant>(`http://localhost:3000/api/v1/restaurants/${id}`);
   }
 
+  login(email,password): Observable<any>{
+    var httpOptions;
+    return this.http.post<any>(`http://localhost:3000/api/v1/auth/login`,{email:email, password: password},httpOptions)
+  }
   // getRecipes(id:String):Observable<Recipe[]>{
   //   return this.http.get<Recipe[]>(`http://localhost:3000/api/v1/recipes/${id}`);
   // }

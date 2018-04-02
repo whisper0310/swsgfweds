@@ -1,3 +1,20 @@
-<p>
-  login works!
-</p>
+<div>
+  <div>
+    <label>email</label>
+    <input #email (keyup)="onKey_email(email.value)" />
+  </div>
+
+  <div>
+    <label>password</label>
+    <input #passowrd (keyup)="onKey_password(passowrd.value)" />
+  </div>
+
+
+  <button (click)="login()">Login</button>
+  <div>
+    <label>
+      {{warning}}
+    </label>
+  </div>
+</div>
+
