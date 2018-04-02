@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   password='';
   login_res={};
   warning='';
-  user_login=false;
+  user_login='false';
   ngOnInit() {
   }
   onKey_email(value){
@@ -27,9 +27,9 @@ export class LoginComponent implements OnInit {
     this.data.login(this.email,this.password).subscribe(
       data => {
         this.login_res=data;
-        this.user_login= true;
+        this.user_login= 'true';
         this.warning="";
-        this.cookie.set('user_login',data.auth);
+        this.cookie.set('user_login','true');
         this.cookie.set('token',data.token);
         this.router.navigateByUrl('');
 

@@ -1,3 +1,19 @@
-<p>
-  register works!
-</p>
+<div>
+  <div>
+    <label>email</label>
+    <input #email (keyup)="onKey_email(email.value)" />
+  </div>
+
+  <div>
+    <label>password</label>
+    <input #passowrd (keyup)="onKey_password(passowrd.value)" />
+  </div>
+
+
+  <button (click)="register()">Register</button>
+  <div>
+    <label>
+      {{warning}}
+    </label>
+  </div>
+</div>
