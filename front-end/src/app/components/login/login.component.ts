@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
         this.warning="";
         this.cookie.set('user_login','true');
         this.cookie.set('token',data.token);
-        this.router.navigateByUrl('');
+        this.router.navigate(['']);
 
       },
         error => {

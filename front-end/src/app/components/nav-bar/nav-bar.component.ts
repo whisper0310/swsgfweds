@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
 export class NavBarComponent implements OnInit {
 
   constructor(private cookie:CookieService, private location:Location) { }
-  user_login;
+  user_login='false';
   token;
   ngOnInit() {
     this.user_login=this.cookie.get('user_login');
@@ -18,10 +18,11 @@ export class NavBarComponent implements OnInit {
   }
   logout(){
       this.cookie.set('user_login','false');
-      this.token.set('token',null);
+      this.cookie.set('token',null);
       this.user_login=this.cookie.get('user_login');
       this.token=this.cookie.get('token');
-      this.location.go('restaurants');
+      this.ngOnInit();
+      // router to logout successful page
   }
 
 }

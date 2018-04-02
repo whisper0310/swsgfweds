@@ -21,6 +21,12 @@ export class DataService {
     var httpOptions;
     return this.http.post<any>(`http://localhost:3000/api/v1/auth/login`,{email:email, password: password},httpOptions)
   }
+
+  register(email,password): Observable<any>{
+    var httpOptions;
+    return this.http.post<any>(`http://localhost:3000/api/v1/auth/register`,{email:email, password: password},httpOptions)
+  }
+
   // getRecipes(id:String):Observable<Recipe[]>{
   //   return this.http.get<Recipe[]>(`http://localhost:3000/api/v1/recipes/${id}`);
   // }

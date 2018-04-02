@@ -9,10 +9,10 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item" *ngIf="user_login==='false'">
+      <li class="nav-item" *ngIf="!(user_login ==='true')">
         <a class="nav-link" href="login">Login</a>
       </li>
-      <li class="nav-item" *ngIf="user_login==='false'">
+      <li class="nav-item" *ngIf="!(user_login ==='true')">
         <a class="nav-link" href="register">Sign up</a>
       </li>
       <li class="nav-item" *ngIf="user_login === 'true'">
