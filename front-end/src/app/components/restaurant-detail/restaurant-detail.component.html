@@ -1,11 +1,25 @@
-<div class="container" *ngIf="restaurant">
-  <div class="col-xs-12 col-md-4">
-    <div>
-      <h2>{{restaurant.name}}</h2>
-      <h2>recipe list</h2>
-      <div *ngFor="let recipe of restaurant.recipes" (click)="this.add_to_cart(recipe)">
-          {{recipe.name}}  price:{{recipe.price}}
+<mat-sidenav-container style="background-color: white" class="example-container" >
+
+  <mat-sidenav-content>
+    <div  class="container" *ngIf="restaurant">
+      <div class="col-xs-12 col-md-4">
+        <div>
+          <h2>{{restaurant.name}}</h2>
+          <h2>recipe list</h2>
+          <div *ngFor="let recipe of restaurant.recipes" (click)="this.add_to_cart(recipe)">
+            {{recipe.name}}  price:{{recipe.price}}
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+
+  </mat-sidenav-content>
+  <mat-sidenav style="width: 400px;" mode="side" position="end" opened>
+    <div>
+      <h3>
+        Shopping Cart
+      </h3>
+
+    </div>
+  </mat-sidenav>
+</mat-sidenav-container>
