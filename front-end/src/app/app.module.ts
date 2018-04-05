@@ -18,6 +18,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {CartComponent} from './components/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     NavBarComponent,
     LoginComponent,
     RegisterComponent,
-    LogoutComponent
+    LogoutComponent,
+    CartComponent
   ],
   imports: [
     FormsModule,
