@@ -9,14 +9,14 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item" *ngIf="!user_login">
+      <li class="nav-item" *ngIf="!(user_login ==='true')">
         <a class="nav-link" href="login">Login</a>
       </li>
-      <li class="nav-item" *ngIf="!user_login">
+      <li class="nav-item" *ngIf="!(user_login ==='true')">
         <a class="nav-link" href="register">Sign up</a>
       </li>
-      <li class="nav-item" *ngIf="user_login">
-        <a class="nav-link" href="register">Log out</a>
+      <li class="nav-item" *ngIf="user_login === 'true'">
+        <a class="nav-link" (click)="logout()">Log out</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

@@ -5,4 +5,5 @@ export class Restaurant{
   name: string;
   address: string;
   recipes: Recipe;
+  pic: string;
 }

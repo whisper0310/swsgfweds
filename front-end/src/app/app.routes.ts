@@ -3,11 +3,17 @@ import { RestaurantListComponent } from './components/restaurant-list/restaurant
 import { RestaurantDetailComponent } from './components/restaurant-detail/restaurant-detail.component';
 import { LoginComponent} from './components/login/login.component';
 import { RegisterComponent} from './components/register/register.component';
+import {LogoutComponent} from './components/logout/logout.component';
 
 const routes: Routes = [
   {
     path: "",
     redirectTo: "restaurants",
+    pathMatch: "full"
+  },
+  {
+    path: "logout",
+    component: LogoutComponent,
     pathMatch: "full"
   },
   {

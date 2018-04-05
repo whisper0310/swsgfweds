@@ -13,7 +13,11 @@ import {FormsModule} from "@angular/forms";
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatSidenavModule} from '@angular/material/sidenav';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +26,19 @@ import { RegisterComponent } from './components/register/register.component';
     AddProblemComponent,
     NavBarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     HttpClientModule,
-    routing
+    routing,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSidenavModule
+
   ],
   providers: [
     {
