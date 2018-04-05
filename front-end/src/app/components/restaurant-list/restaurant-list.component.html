@@ -1,30 +1,37 @@
- <div class="container">
-            <div class="list-group">
-                <div class="list-group-item" *ngFor="let restaurant of restaurants"
-                     [routerLink]="['/restaurants/',restaurant._id]">
-                    <!--<strong>id:{{restaurant._id}}, name:{{restaurant.name}}</strong>-->
+<div>
+    blank
+</div>
+<div>
+    blank
+</div>
+<div class="container">
+    <div class="list-group">
+        <div class="list-group-item" *ngFor="let restaurant of restaurants"
+             [routerLink]="['/restaurants/',restaurant._id]">
+            <!--<strong>id:{{restaurant._id}}, name:{{restaurant.name}}</strong>-->
 
-                    <!--<h4 class="list-group-item-heading">{{restaurant.name}}</h4>-->
-                    <!--<p class="list-group-item-text">chef specials: </p>-->
-                    <!--<p class="list-group-item-text">Address: {{restaurant._id}}</p>-->
+            <!--<h4 class="list-group-item-heading">{{restaurant.name}}</h4>-->
+            <!--<p class="list-group-item-text">chef specials: </p>-->
+            <!--<p class="list-group-item-text">Address: {{restaurant._id}}</p>-->
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <h4 class="list-group-item-heading">{{restaurant.name}}</h4>
-                                <p class="list-group-item-text">chef specials: </p>
-                                <p class="list-group-item-text">Address: {{restaurant._id}}</p>
-                            </div>
-                            <div class="col-md-3">
-                                <img src="images/me.jpg" alt="loading failure" width="128" height="156" hspace="80px" vspace="20px">
-                            </div>
-                        </div>
-
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h4 class="list-group-item-heading">{{restaurant.name}}</h4>
+                        <p class="list-group-item-text">chef specials: </p>
+                        <p class="list-group-item-text">Address: {{restaurant._id}}</p>
                     </div>
-
+                    <div class="col-md-3">
+                        <img src="images/me.jpg" alt="loading failure" width="128" height="156" hspace="80px"
+                             vspace="20px">
+                    </div>
                 </div>
+
             </div>
+
         </div>
+    </div>
+</div>
 
 
 
