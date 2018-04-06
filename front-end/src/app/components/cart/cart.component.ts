@@ -9,9 +9,13 @@ import {CartService} from '../../services/cart.service';
 @Injectable()
 export class CartComponent implements OnInit {
 
-  constructor(private cart:CartService) { }
-
-  ngOnInit() {
+  constructor(private cart:CartService) {
+    cart.cart$.subscribe(cart_data => this.cart_data=cart_data);
   }
+  cart_data;
+  ngOnInit() {
+
+  }
+
 
 }

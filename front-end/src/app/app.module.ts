@@ -19,6 +19,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {CartComponent} from './components/cart/cart.component';
+import {CartService} from './services/cart.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import {CartComponent} from './components/cart/cart.component';
       provide:"data",
       useClass: DataService
     },
+    CartService,
     CookieService],
   // put something in providers, it can be used every where
   bootstrap: [AppComponent]
