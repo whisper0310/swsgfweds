@@ -1,3 +1,15 @@
-<li *ngFor="let recipe of cart_data">
-  {{recipe.price}}
-</li>
+<div>
+  <h5 style="margin: 15px">Shopping Cart</h5>
+  <div style="margin-bottom: 15px">
+    <mat-card *ngFor="let recipe of cart_data">
+      {{recipe.name}}
+      <button class="round-button">-</button>
+      10
+      <button class="round-button">+</button>
+      <button class="round-button">x</button>
+    </mat-card>
+  </div>
+
+
+  <button style="margin-left: 15px" mat-raised-button color="primary">Checkout</button>
+</div>

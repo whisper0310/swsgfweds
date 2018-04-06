@@ -10,14 +10,18 @@ import { DataService } from './services/data.service';
 import { RestaurantDetailComponent } from './components/restaurant-detail/restaurant-detail.component';
 import { AddProblemComponent } from './components/add-problem/add-problem.component';
 import {FormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LogoutComponent } from './components/logout/logout.component';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatSidenavModule} from '@angular/material/sidenav';
+
 import {CartComponent} from './components/cart/cart.component';
 import {CartService} from './services/cart.service';
 @NgModule({
@@ -40,7 +44,9 @@ import {CartService} from './services/cart.service';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule,
+    MatIconModule
 
   ],
   providers: [
