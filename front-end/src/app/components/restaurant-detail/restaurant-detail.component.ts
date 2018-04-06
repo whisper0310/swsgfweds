@@ -24,7 +24,6 @@ export class RestaurantDetailComponent implements OnInit {
 
 
   add_to_cart(recipe){
-    // console.log('added');
     this.cartService.addRecipe(recipe);
   }
   ngOnInit() {

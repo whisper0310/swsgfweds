@@ -10,16 +10,12 @@ export class CartService {
 
   constructor() { }
 
-  // addRecipe(recipe:Recipe){
-  //   this.cart.push(recipe);
-  //   return this.cart;
-  // }
-
   private cartSource= new Subject<Recipe[]>();
 
   cart$ = this.cartSource.asObservable();
 
   cartData = [];
+
   getTotalPrice(){
     let totalPrice=0.0;
 
@@ -27,7 +23,17 @@ export class CartService {
   }
 
   addRecipe(recipe){
-    this.cartData.push(recipe);
+    let existed=0;
+    for(let ele of this.cartData){
+      if (ele.Recipe._id===recipe._id){
+        console.log(ele.Recipe, recipe);
+        existed=1;
+        ele.number = ele.number+1
+      }
+    }
+    if (existed ===0 ){
+      this.cartData.push({Recipe:recipe,number:1});
+    }
     console.log(this.cartData);
     this.sendCartData();
   }
